@@ -1,0 +1,9 @@
+{
+    "name": "root/objeto",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {"Factory": "src/"}
+    }
+}
