@@ -4,7 +4,7 @@ ini_set("display_errors",true);
 
 $loader = require 'vendor/autoload.php';
 
-$comm = new \Factory\Pattern\BloggsCommsManager();
+$comm = new \Factory\Pattern\MegaCommsManager();
 $mega = $comm->getApptEncoder();
 
 echo $comm->getHeaderText();
