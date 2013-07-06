@@ -1,15 +1,23 @@
 <?php
 
 ini_set("display_errors",true);
+error_reporting(E_ALL);
 
-$loader = require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
-$comm = new \Factory\Pattern\MegaCommsManager();
-$mega = $comm->getApptEncoder();
+
+$comm = new AbstractFactory\BloggsCommsManager();
+$appt = $comm->make(1);
+$ttd = $comm->make(2);
+$contact = $comm->make(3);
 
 echo $comm->getHeaderText();
 echo "<br/>";
-echo $mega->encode();
+echo $appt->encode();
+echo "<br/>";
+echo $ttd->encode();
+echo "<br/>";
+echo $contact->encode();
 echo "<br/>";
 echo $comm->getFooterText();
 
